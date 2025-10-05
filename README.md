@@ -92,19 +92,6 @@ bun run dev
 
 O servidor estará disponível em: http://localhost:3000
 
-## 📧 Configuração de Email
-
-Para configurar o envio de emails, consulte o guia detalhado: **[EMAIL_SETUP.md](./EMAIL_SETUP.md)**
-
-### Teste rápido de email
-
-Para testar o envio de emails, execute:
-
-```bash
-# Edite src/test-email.ts e altere o email de teste
-bun run src/test-email.ts
-```
-
 ## 🔑 Endpoints de Autenticação
 
 ### Registro de Usuário

@@ -8,4 +8,20 @@ services:
       POSTGRES_PASSWORD: docker
     ports:
       - "5432:5432"
-    
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgweb:
+    image: sosedoff/pgweb:latest
+    container_name: bun-auth-pgweb
+    ports:
+      - "8081:8081"
+    environment:
+      - PGWEB_DATABASE_URL=postgres://docker:docker@postgres:5432/auth?sslmode=disable
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

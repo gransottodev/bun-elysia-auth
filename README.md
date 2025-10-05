@@ -182,16 +182,8 @@ Cookie: better-auth.session_token=SEU_TOKEN
 A documentação interativa OpenAPI está disponível em:
 
 ```
-http://localhost:3000/swagger
+http://localhost:3000/openapi
 ```
-
-## 🧪 Testando
-
-Use o arquivo `test-email.http` com a extensão REST Client do VS Code:
-
-1. Instale a extensão [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
-2. Abra o arquivo `test-email.http`
-3. Clique em "Send Request" acima de cada requisição
 
 ## 📁 Estrutura do Projeto
 
@@ -249,33 +241,6 @@ emailAndPassword: {
 - `bun run dev` - Inicia o servidor de desenvolvimento
 - `bun run db:generate` - Gera migrações do banco
 - `bun run db:migrate` - Executa migrações do banco
-
-## 🐛 Troubleshooting
-
-### Email não está sendo enviado
-
-1. Verifique se `RESEND_API_KEY` está configurada corretamente
-2. Certifique-se de que o domínio está verificado no Resend
-3. Para desenvolvimento, use `onboarding@resend.dev` como `FROM_EMAIL`
-4. Verifique os logs da aplicação para erros
-
-### Erro de conexão com banco de dados
-
-1. Verifique se o PostgreSQL está rodando: `docker-compose ps`
-2. Verifique a `DATABASE_URL` no arquivo `.env`
-3. Teste a conexão: `psql $DATABASE_URL`
-
-### Erro "Email not verified"
-
-O usuário precisa clicar no link de verificação enviado por email antes de fazer login.
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
 
 ## 📚 Recursos Úteis
 
